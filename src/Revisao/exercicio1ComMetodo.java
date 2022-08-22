@@ -18,15 +18,11 @@ public class exercicio1ComMetodo {
 
         menorNota();
 
-        System.out.printf("A média da sala é de %.2f. ", mediaNotas());
-        System.out.println(" ");
+        mediaNotas();
 
-        System.out.printf("A quantidade de alunos com notas abaixo da média é de: %s. "
-                , quantidadeNotasAbaixoMedia());
-        System.out.println(" ");
+        quantidadeNotasAbaixoMedia();
 
-        System.out.println("As notas ajustadas com 1 ponto a mais:");
-        System.out.println(Arrays.toString(somar1Ponto()));
+        somar1Ponto();
 
     }
 
@@ -35,6 +31,11 @@ public class exercicio1ComMetodo {
         double [] notas = new double[]{3.5, 9.2, 5.5, 10.0, 6.1, 6.6, 8.2, 9.5, 5.0, 7.0};
         Arrays.sort(notas);
         return notas;
+    }
+
+    static void imprimeNotas(){
+        inicializarNotas();
+        System.out.println(Arrays.toString(inicializarNotas()));
     }
 
     static void menorNota(){
@@ -54,22 +55,26 @@ public class exercicio1ComMetodo {
             media += notas2[j];
         }
         media /= notas2.length;
+        imprimeNotas();
+        System.out.printf("A média da sala é de %.2f. ", media);
         return media;
     }
 
-    public static int quantidadeNotasAbaixoMedia(){
+    static void quantidadeNotasAbaixoMedia(){
         double [] notas2 = inicializarNotas();
         int qtdNotasAbaixoMedia = 0;
-        float media = mediaNotas();
+        float media = 6;
         for (int a = 0; a < notas2.length; a++){
             if (notas2[a] < media){
                 qtdNotasAbaixoMedia++;
             }
         }
-        return qtdNotasAbaixoMedia;
+        imprimeNotas();
+        System.out.printf("A quantidade de alunos com notas abaixo da média de 6.0 é de: %s. "
+                , qtdNotasAbaixoMedia);
     }
 
-    public static double[] somar1Ponto(){
+    static void somar1Ponto(){
         double [] notas2 = inicializarNotas();
         for (int b = 0; b < notas2.length; b++){
             notas2[b] += 1;
@@ -77,6 +82,9 @@ public class exercicio1ComMetodo {
                 notas2[b] = 10.0;
             }
         }
-        return notas2;
+        System.out.println(" ");
+        imprimeNotas();
+        System.out.println("As notas ajustadas com 1 ponto a mais:");
+        System.out.println(Arrays.toString(notas2));
     }
 }
