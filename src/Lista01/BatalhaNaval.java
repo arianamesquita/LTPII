@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 // criar random baseado em 1, 2 e 3
-// switch case escolhe o método baseado no random - 1 linha, 2 coluna, 3 transversal
+// switch case escolhe o método baseado no random - 1 linha, 2 coluna, 3 diagonal principal e 4 diagonal secundária
 // casa escolhida matriz impressa fica igual casa da matriz jogo
 
 // fazer um random que seleciona o i e j para locar o navio

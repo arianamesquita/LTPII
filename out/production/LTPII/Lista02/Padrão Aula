@@ -1,0 +1,14 @@
+[abc]       Um único caractere: a, b ou c
+[a-z]       Um único caractere dentre a e z
+a|b         Verifica se corresponde com a ou b
+\d          Um dígito: [0-9]
+\w          Um caractere de uma palavra: [a-z_A-Z_0-9]
+.           Qualquer caracter sozinho
+a{3}        Exatamente 3 "a"s: aaa
+a{3, }      3 ou mais 3 "a"s
+a{2, 4 }    Entre 2 e 4 "a"s
+^           O início de uma linha
+$           O final de uma linha
+*           Verifica se corresponde à nenhuma ou mais ocorrências
++           Verifica se corresponde à uma ou mais ocorrências
+?           Verifica se corresponde com nenhuma ou uma ocorrência

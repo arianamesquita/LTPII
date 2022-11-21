@@ -14,6 +14,7 @@ public class Aula2 {
         // CLASSES = MODELOS, MOLDE, FORMA...
         // OBJETO = AQUILO QUE É MOLDADO
 
+
         System.out.println(mensagemDaClasse);
 
         double x = 2;
